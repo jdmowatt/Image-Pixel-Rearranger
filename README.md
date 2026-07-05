@@ -1,4 +1,4 @@
-# Image-Pixell_Rearranger
+# Image-Pixel-Rearranger
 
 Program will rearrange the pixels of one image to try and look like another image.
 
