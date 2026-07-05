@@ -17,12 +17,17 @@ int main(int argc, char* argv[]) {
     Image a = loadImage(sourceFile);
     Image b = loadImage(targetFile);
 
-    // Check if images are the same size
+    // Check if images are the same size, if not resizes the larger one.
     if (a.width != b.width || a.height != b.height) {
-        std::cout << "Error: Image dimensions must match exactly.\n";
-        std::cout << "Source: " << a.width << "x" << a.height << "\n";
-        std::cout << "Target: " << b.width << "x" << b.height << "\n";
-        return 1;
+        std::cout << "Resizing.\n";
+        long long aCount = (long long)a.width * a.height;
+        long long bCount = (long long)b.width * b.height;
+
+        if (aCount > bCount) {
+            a = resizeImage(a, b.width, b.height);
+        } else {
+            b = resizeImage(b, a.width, a.height);
+        }
     }
 
     // Run matcher algorithm to get result

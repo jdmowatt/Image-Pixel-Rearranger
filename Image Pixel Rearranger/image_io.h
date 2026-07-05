@@ -18,3 +18,6 @@ Image loadImage(const std::string& filename);
 
 // Saves an image to filename
 void saveImage(const std::string& filename, const Image& img);
+
+// Resizes an image
+Image resizeImage(const Image& img, int newWidth, int newHeight);
