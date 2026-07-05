@@ -1,6 +1,7 @@
 #include "matcher.h"
 #include <numeric>
 #include <algorithm>
+#include <iostream>
 #include <random>
 
 double brightness(const Pixel& p) {
@@ -8,6 +9,8 @@ double brightness(const Pixel& p) {
 }
 
 std::vector<Pixel> matchBrightness(const std::vector<Pixel>& source, const std::vector<Pixel>& target) {
+    std::cout << "Matching brightness ...\n";
+
     // Initialize order vectors
     std::vector<int> sourceOrder(source.size());
     std::vector<int> targetOrder(target.size());

@@ -19,7 +19,6 @@ int main(int argc, char* argv[]) {
 
     // Check if images are the same size, if not resizes the larger one.
     if (a.width != b.width || a.height != b.height) {
-        std::cout << "Resizing.\n";
         long long aCount = (long long)a.width * a.height;
         long long bCount = (long long)b.width * b.height;
 

@@ -57,6 +57,8 @@ void saveImage(const std::string& filename, const Image& img) {
 }
 
 Image resizeImage(const Image& img, int newWidth, int newHeight) {
+    std::cout << "Resizing ...\n";
+
     // Initialize Variables
     int width = img.width;
     int height = img.height;
